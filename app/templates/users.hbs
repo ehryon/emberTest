@@ -1,0 +1,11 @@
+{{outlet}}
+<p>Utilisateurs</p>
+<div id='user-list' class='list'>
+{{#each user in model}}
+<ul>
+	<li>{{user.nom}}</li>
+	<li>{{user.prenom}}</li>
+	<li>{{user.telephone}}</li>
+</ul>
+{{/each}}
+</div>
