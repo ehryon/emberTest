@@ -3,17 +3,18 @@ import config from './config/environment';
 
 var Router = Ember.Router.extend
 ({
-    location: config.locationType
+	location: config.locationType
 });
 
 Router.map(function()
 {
-  this.route("application", {path: "/"}, function()
-	{
-      this.route("users", function(){});
-	});
-  this.route("dataFile");
+  // this.resource("users", {path: "users"}, function(){});
+  this.resource("application", {path: "/"}, function()
+  {
+  	this.resource("users", {path: "users"});
+  });
 });
 
 
 export default Router;
+ 
