@@ -1,0 +1,8 @@
+{{outlet}}
+<section id='addForm'>
+{{#em-form form_layout="horizontal" model=user action="createUser"}}
+	{{em-input label="Nom" property="nom" value=user.nom}}
+	{{em-input label="Prenom" property="prenom" value=user.prenom}}
+	{{em-input label="Telephone" property="telephone" value=user.telephone}}
+{{/em-form}}
+</section>

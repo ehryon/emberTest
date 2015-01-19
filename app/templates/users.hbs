@@ -3,10 +3,12 @@
 <div id='user-list' class='list'>
 	<ul>
 	{{#each user in model}}
-		<li>{{user.id}}</li>
-		<li>{{user.nom}}</li>
-		<li>{{user.prenom}}</li>
-		<li>{{user.telephone}}</li>
+		<li>
+		{{user.id}}
+		</li>
+			{{user.nom}}
+			{{user.prenom}}
+			{{user.telephone}}
 	{{/each}}
 	</ul>
 </div>

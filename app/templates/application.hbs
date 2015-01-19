@@ -1,9 +1,17 @@
 <h2 id="title">Welcome to Ember.js</h2>
 
 <section id='nav'>
-	{{#link-to 'users'}}
-	Users
-	{{/link-to}}	
+	{{#em-list tagName="div" class="list-group" selectedClass="active" selected=s}}
+	{{#em-list-item tagName="a" class="list-group-item" u="Users"}}
+		{{#link-to 'application'}}Home{{/link-to}}
+	{{/em-list-item}}
+	{{#em-list-item tagName="a" class="list-group-item" u="Users"}}
+		{{#link-to 'users'}}Users{{/link-to}}
+	{{/em-list-item}}
+	{{#em-list-item tagName="a" class="list-group-item" u="Form"}}
+		{{#link-to 'add-user'}}Ajout{{/link-to}}
+	{{/em-list-item}}
+	{{/em-list}}
 </section>
 
 <section id='main'>

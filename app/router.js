@@ -12,6 +12,7 @@ Router.map(function()
   this.resource("application", {path: "/"}, function()
   {
   	this.resource("users", {path: "users"});
+  	this.resource("add-user", {path: "form"});
   });
 });
 
