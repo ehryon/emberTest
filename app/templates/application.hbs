@@ -1,19 +1,27 @@
 <h2 id="title">Welcome to Ember.js</h2>
 
-<section id='nav'>
-	{{#em-list tagName="div" class="list-group" selectedClass="active" selected=s}}
-	{{#em-list-item tagName="a" class="list-group-item" u="Users"}}
-		{{#link-to 'application'}}Home{{/link-to}}
-	{{/em-list-item}}
-	{{#em-list-item tagName="a" class="list-group-item" u="Users"}}
-		{{#link-to 'users'}}Users{{/link-to}}
-	{{/em-list-item}}
-	{{#em-list-item tagName="a" class="list-group-item" u="Form"}}
-		{{#link-to 'add-user'}}Ajout{{/link-to}}
-	{{/em-list-item}}
-	{{/em-list}}
+<section id="description">
+	<p>Application de test et présentation du framework Ember.Js</p>
 </section>
+
+<section id='nav' class="nav nav-tabs">
+	<div class="navbar">
+	<div class="navbar-inner">
+	<span>
+	{{#link-to 'application' classNames="" }}Home{{/link-to}}
+	</span>
+	<span>
+	{{#link-to 'users' classNames="" }}Users{{/link-to}}
+	</span>
+	<span>
+	{{#link-to 'add-user' classNames="" }}AddUser{{/link-to}}
+	</span>
+	</div>
+</div>
+</section>
+
 
 <section id='main'>
 	{{outlet}}
 </section>
+

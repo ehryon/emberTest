@@ -1,14 +1,15 @@
-{{outlet}}
 <p>Utilisateurs</p>
+
+<p>Recherche sur Nom</p>
+
 <div id='user-list' class='list'>
-	<ul>
+	<ul class="list-group">
 	{{#each user in model}}
-		<li>
-		{{user.id}}
-		</li>
+		<li class="list-group-item">
 			{{user.nom}}
 			{{user.prenom}}
 			{{user.telephone}}
+		</li>
 	{{/each}}
 	</ul>
 </div>

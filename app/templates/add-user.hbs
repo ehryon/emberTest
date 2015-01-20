@@ -1,8 +1,39 @@
 {{outlet}}
+<p>Formulaire d'ajout d'utilisateur</p>
 <section id='addForm'>
-{{#em-form form_layout="horizontal" model=user action="createUser"}}
-	{{em-input label="Nom" property="nom" value=user.nom}}
-	{{em-input label="Prenom" property="prenom" value=user.prenom}}
-	{{em-input label="Telephone" property="telephone" value=user.telephone}}
-{{/em-form}}
+	<div>
+		{{!-- <form method="get" {{action "createUser" on="submit enter"}}> --}}
+			<div>
+				{{input type="text" id="new-userName" placeholder="Nom" value=nom required=true }}
+			</div>
+			<div>
+				{{input type="text" id="new-userSurname" placeholder="Prénom" value=prenom required=true }}
+			</div>
+			<div>
+			</div>
+			<div>
+				{{input type="text" id="new-userPhone" placeholder="Téléphone" value=telephone required=true }}
+			</div>
+			<br>
+			<div {{bind-attr class="isCreated:hide" }}>
+				<button type="submit" class="btn btn-default" {{action "createUser"}}>Ajouter !</button>
+			</div>
+		{{!-- </form> --}}
+	</div>
+
 </section>
+
+
+{{!-- <section>
+	{{#em-form form_layout="horizontal" model=user action="createUser" on="submit, enter"}}
+	{{em-input label="Nom" property=nom}}
+	{{em-input label="Prénom" property=prenom}}
+	{{em-input label="Téléphone" property=telephone}}
+	{{/em-form}}
+</section> --}}
+
+{{#if isCreated}}
+<p>
+	Utilisateur créé!
+</p>
+{{/if}}

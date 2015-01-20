@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+	isCreated:false,
+
 	actions:
 	{
 		createUser: function()
@@ -11,11 +13,14 @@ export default Ember.Controller.extend({
 			prenom = this.get('prenom');
 			telephone = this.get('telephone');
 			
+			if(!nom || ! prenom || !telephone)
+			{
+				return;
+			}
 			// debug
 			console.log(nom);
 			console.log(prenom);
 			console.log(telephone);
-			console.log(this);
 
 			user = this.store.createRecord('user',
 			{
@@ -25,9 +30,15 @@ export default Ember.Controller.extend({
 			});
 			user.save();
 
+			// not working, why ?
 			this.set('nom','');
 			this.set('prenom','');
 			this.set('telephone','');
+
+
+			this.set('isCreated', true);
 		}
-	}
+	},
+
+
 });

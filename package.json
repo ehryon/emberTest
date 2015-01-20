@@ -1,7 +1,7 @@
 {
   "name": "todomvc-cli",
   "version": "0.0.0",
-  "description": "Small description for todomvc-cli goes here",
+  "description": "Small Test App of Ember.Js",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -16,7 +16,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Ehryon",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
@@ -32,7 +32,6 @@
     "ember-export-application-global": "^1.0.0",
     "ember-idx-forms": "^0.5.1",
     "ember-idx-list": "^0.1.0",
-    "ember-idx-modal": "^0.1.2",
     "ember-validations": "^2.0.0-alpha.1",
     "express": "^4.8.5",
     "glob": "^4.0.5"
