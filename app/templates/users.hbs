@@ -2,14 +2,18 @@
 
 <p>Recherche sur Nom</p>
 
+<div id="searchFilter" class="input">
+	<p>{{input type="text" placeholder="Filtre" value=searchTerm}}</p>
+</div>
+
 <div id='user-list' class='list'>
 	<ul class="list-group">
-	{{#each user in model}}
+		{{#each user in model}}
 		<li class="list-group-item">
 			{{user.nom}}
 			{{user.prenom}}
 			{{user.telephone}}
 		</li>
-	{{/each}}
+		{{/each}}
 	</ul>
 </div>
